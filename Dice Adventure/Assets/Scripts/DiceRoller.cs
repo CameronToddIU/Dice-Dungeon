@@ -13,6 +13,7 @@ public class DiceRoller : MonoBehaviour
     public int mana = 0;
     public int totalMana = 0;
     public TextMeshProUGUI manaText;
+    public HealthCounter healthCounter;
 
 
     private bool isRolling = false;
@@ -58,7 +59,7 @@ private IEnumerator WaitForDiceToStop()
     mana = result;
     Debug.Log("Dice roll result: " + result);
     this.ManaMethod();
-
+    healthCounter.loseHealth();
     diceRigidbody.isKinematic = true;
     isRolling = false;
 }
@@ -89,30 +90,35 @@ private IEnumerator WaitForDiceToStop()
     {
         totalMana -= 1;
         manaText.text = "Mana: " + totalMana;
+        healthCounter.damage(1);
     }
 
     public void useFireball()
     {
         totalMana -= 2;
         manaText.text = "Mana: " + totalMana;
+        healthCounter.damage(3);
     }
 
     public void useShockwave()
     {
         totalMana -= 2;
         manaText.text = "Mana: " + totalMana;
+        healthCounter.damage(5);    
     }
 
     public void useBoulderush()
     {
         totalMana -= 4;
         manaText.text = "Mana: " + totalMana;
+        healthCounter.damage(7);
     }
 
     public void useSmite() 
     {
         totalMana -= 3;
         manaText.text = "Mana: " + totalMana;
+        healthCounter.damage(2);
     }
 
 

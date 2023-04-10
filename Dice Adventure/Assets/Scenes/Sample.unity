@@ -452,6 +452,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472613338}
   m_CullTransparentMesh: 1
+--- !u!114 &476750815 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4718602707979549250, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+  m_PrefabInstance: {fileID: 2118185875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0ff5fa2331dd9499c88d674f78949d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &482675711
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +562,10 @@ PrefabInstance:
       propertyPath: diceRigidbody
       value: 
       objectReference: {fileID: 1424964727}
+    - target: {fileID: 1864672224135409004, guid: 0d2b9188252a78b4298fb8e34d9229ee, type: 3}
+      propertyPath: healthCounter
+      value: 
+      objectReference: {fileID: 476750815}
     - target: {fileID: 6138043921473953259, guid: 0d2b9188252a78b4298fb8e34d9229ee, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -976,6 +991,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4718602707979549250, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemyHealthText
+      value: 
+      objectReference: {fileID: 2118185876}
     - target: {fileID: 4718602708934743485, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1026,6 +1045,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+--- !u!114 &2118185876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8604682003362424259, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+  m_PrefabInstance: {fileID: 2118185875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2119796921
 GameObject:
   m_ObjectHideFlags: 0
