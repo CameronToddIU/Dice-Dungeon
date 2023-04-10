@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DiceRoller : MonoBehaviour
 {
     public Rigidbody diceRigidbody;
     public float force = 5f;
     private DiceFace[] diceFaces;
+    public int mana = 0;
+    public int totalMana = 0;
+    public TextMeshProUGUI manaText;
+
 
     private bool isRolling = false;
 
@@ -48,7 +55,9 @@ private IEnumerator WaitForDiceToStop()
 
     // Get dice roll result here
     int result = GetDiceRollResult();
+    mana = result;
     Debug.Log("Dice roll result: " + result);
+    this.ManaMethod();
 
     diceRigidbody.isKinematic = true;
     isRolling = false;
@@ -67,6 +76,43 @@ private IEnumerator WaitForDiceToStop()
 
         // Default value in case no face is detected touching the ground
         return 1;
+    }
+
+
+    public void ManaMethod()
+    {
+        totalMana += mana;
+        manaText.text = "Mana: " + totalMana;
+    }
+
+    public void useTorrent()
+    {
+        totalMana -= 1;
+        manaText.text = "Mana: " + totalMana;
+    }
+
+    public void useFireball()
+    {
+        totalMana -= 2;
+        manaText.text = "Mana: " + totalMana;
+    }
+
+    public void useShockwave()
+    {
+        totalMana -= 2;
+        manaText.text = "Mana: " + totalMana;
+    }
+
+    public void useBoulderush()
+    {
+        totalMana -= 4;
+        manaText.text = "Mana: " + totalMana;
+    }
+
+    public void useSmite() 
+    {
+        totalMana -= 3;
+        manaText.text = "Mana: " + totalMana;
     }
 
 
