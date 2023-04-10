@@ -88,37 +88,52 @@ private IEnumerator WaitForDiceToStop()
 
     public void useTorrent()
     {
-        totalMana -= 1;
-        manaText.text = "Mana: " + totalMana;
-        healthCounter.damage(1);
+        if(totalMana > 0) {
+            totalMana -= 1;
+            manaText.text = "Mana: " + totalMana;
+            healthCounter.damage(1);
+        }
+        
     }
 
     public void useFireball()
     {
-        totalMana -= 2;
+        if(totalMana >=2) {
+            totalMana -= 2;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(3);
+        }
+        
     }
 
     public void useShockwave()
     {
-        totalMana -= 3;
+        if(totalMana >=3) {
+            totalMana -= 3;
         manaText.text = "Mana: " + totalMana;
-        healthCounter.damage(5);    
+        healthCounter.damage(5);  
+        }
+          
     }
 
     public void useBoulderush()
     {
-        totalMana -= 4;
+        if(totalMana >=4) {
+            totalMana -= 4;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(7);
+        }
+        
     }
 
     public void useSmite() 
     {
-        totalMana -= 5;
+        if(totalMana >= 5) {
+            totalMana -= 5;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(2);
+        healthCounter.heal();
+        }   
     }
 
 
