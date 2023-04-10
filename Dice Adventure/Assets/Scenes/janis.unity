@@ -325,6 +325,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &798038378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4843263291386689309, guid: 13c4f139aaaea064d8a533d5e8bb47e2, type: 3}
+  m_PrefabInstance: {fileID: 1108441773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &798038382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798038378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41603897fa20c0149949a0c287037527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2120322385}
+  torrent: {fileID: 1288334518}
+  fireball: {fileID: 2086153104}
+  shockwave: {fileID: 1705891606}
+  boulderush: {fileID: 1102020258}
+  smite: {fileID: 909169223}
+  funnySkeleton: {fileID: 1422178767}
 --- !u!1 &909169223
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +860,7 @@ GameObject:
   - component: {fileID: 1422178770}
   - component: {fileID: 1422178769}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: FunnySkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1257,7 +1281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: -1
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1346,7 +1370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Spell: Torrent - Deals 2 damage to target enemy
+  m_text: 'Spell: Torrent - Deals 1 damage to target enemy
 
     Cost: 1'
   m_isRightToLeft: 0
