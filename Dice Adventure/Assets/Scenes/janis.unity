@@ -348,6 +348,7 @@ MonoBehaviour:
   shockwave: {fileID: 1705891606}
   boulderush: {fileID: 1102020258}
   smite: {fileID: 909169223}
+  defaultSelect: {fileID: 1288334522}
   funnySkeleton: {fileID: 1422178767}
 --- !u!1 &909169223
 GameObject:

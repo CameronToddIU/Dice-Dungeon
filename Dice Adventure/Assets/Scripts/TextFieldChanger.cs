@@ -18,6 +18,9 @@ public class TextFieldChanger : MonoBehaviour
     public GameObject boulderush;
     public GameObject smite;
 
+    //default button selection for when the player clicks off buttons
+    public Button defaultSelect;
+
     //buttons for enemy selection
     public GameObject funnySkeleton;
 
@@ -51,6 +54,9 @@ public class TextFieldChanger : MonoBehaviour
         {
             textField.text = "Spell: Smite - Deals 2 damage to selected enemy. If enemy is defeated, heal 5 health\n" +
                 "Cost: 3 mana";
+        } else if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            defaultSelect.Select();
         }
     }
 }
