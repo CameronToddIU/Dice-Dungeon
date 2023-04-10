@@ -44,16 +44,16 @@ public class TextFieldChanger : MonoBehaviour
                 "Cost: 2 mana";
         } else if (EventSystem.current.currentSelectedGameObject == shockwave)
         {
-            textField.text = "Spell: Shockwave - Deals 1 Damage to all enemies\n" +
-                "Cost: 2 mana";
+            textField.text = "Spell: Shockwave - Deals 5 Damage to Target Enemy\n" +
+                "Cost: 3 mana";
         } else if (EventSystem.current.currentSelectedGameObject == boulderush)
         {
-            textField.text = "Spell: Boulderush - Deals 3 Damage to all enemies\n" +
+            textField.text = "Spell: Boulderush - Deals 7 Damage to Target Enemy\n" +
                 "Cost: 4 mana";
         } else if (EventSystem.current.currentSelectedGameObject == smite)
         {
             textField.text = "Spell: Smite - Deals 2 damage to selected enemy. If enemy is defeated, heal 5 health\n" +
-                "Cost: 3 mana";
+                "Cost: 5 mana";
         } else if (EventSystem.current.currentSelectedGameObject == null)
         {
             defaultSelect.Select();

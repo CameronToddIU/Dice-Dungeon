@@ -102,7 +102,7 @@ private IEnumerator WaitForDiceToStop()
 
     public void useShockwave()
     {
-        totalMana -= 2;
+        totalMana -= 3;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(5);    
     }
@@ -116,7 +116,7 @@ private IEnumerator WaitForDiceToStop()
 
     public void useSmite() 
     {
-        totalMana -= 3;
+        totalMana -= 5;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(2);
     }
