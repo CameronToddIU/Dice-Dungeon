@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class HealthCounter : MonoBehaviour
@@ -12,6 +13,8 @@ public class HealthCounter : MonoBehaviour
     int enemyHealth = 25;
     bool enemyHealthChanged = false;
     bool enemyKilled = false;
+    public Image hpBar;
+    public Image EHP;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,7 @@ public class HealthCounter : MonoBehaviour
                 UnityEngine.Debug.Log("player died");
                 //death method
             }
+            hpBar.fillAmount = health/10.0f;
             //set text to value health 
             healthText.text = health.ToString();
             //set bool to false again so we can only change it when the value changes.
@@ -41,6 +45,7 @@ public class HealthCounter : MonoBehaviour
                 enemyHealth = 0;
                 //death method
             }
+            EHP.fillAmount = enemyHealth/25.0f;
             //set text to value health 
             enemyHealthText.text = enemyHealth.ToString();
             //set bool to false again so we can only change it when the value changes.
