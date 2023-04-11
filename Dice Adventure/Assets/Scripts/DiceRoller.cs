@@ -21,6 +21,7 @@ public class DiceRoller : MonoBehaviour
     public AudioSource thunder;
     public AudioSource rock;
     public AudioSource magic;
+    public AudioSource enemyAttack;
 
 
     private bool isRolling = false;
@@ -61,6 +62,8 @@ private IEnumerator WaitForDiceToStop()
     // Wait for a small delay after the dice stops moving
     yield return new WaitForSeconds(0.5f);
 
+        //enemy attack sound
+        enemyAttack.Play();
     // Get dice roll result here
     int result = GetDiceRollResult();
     mana = result;
