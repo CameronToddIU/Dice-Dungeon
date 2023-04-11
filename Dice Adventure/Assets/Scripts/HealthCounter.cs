@@ -9,18 +9,20 @@ public class HealthCounter : MonoBehaviour
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI enemyHealthText;
     bool healthChanged = false;
-    int health = 10;
-    int enemyHealth = 25;
+    int health = 20;
+    int enemyHealth = 15;
     bool enemyHealthChanged = false;
     bool enemyKilled = false;
     public Image hpBar;
     public Image EHP;
 
+    public int enemyHealthIncrease = 5;
+
     public int spriteIndex = 0;
     public Sprite[] enemySprites;
     [SerializeField]
     public GameObject enemyGameObject;
-    private Image spriteRenderer;
+    private RawImage spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,19 @@ public class HealthCounter : MonoBehaviour
         enemyHealthChanged = true;
         // spriteRenderer = GetComponent<SpriteRenderer>();
 
-        spriteRenderer = enemyGameObject.GetComponent<Image>();
+        // spriteRenderer = enemyGameObject.GetComponent<Image>();
+        if (enemyGameObject != null)
+        {
+            spriteRenderer = enemyGameObject.GetComponent<RawImage>();
+            if (spriteRenderer == null)
+            {
+                Debug.LogError("Failed to obtain the RawImage component.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Enemy GameObject is not assigned");
+        }
     }
 
     // Update is called once per frame
@@ -73,9 +87,10 @@ public class HealthCounter : MonoBehaviour
         if(enemyHealth <= 0)
         {
             Debug.Log("EnemyDied");
+            enemyHealth = 15 + enemyHealthIncrease;
+            enemyHealthIncrease = enemyHealthIncrease + 5;
             spriteIndex++;
             SwapSprite(spriteIndex);
-            // SwapSprite(spriteIndex);
         }
         enemyHealthChanged = true;
     }
@@ -94,7 +109,7 @@ public class HealthCounter : MonoBehaviour
     {
         if (spriteRenderer != null && enemySprites != null && index >= 0 && index < enemySprites.Length)
         {
-            spriteRenderer.sprite = enemySprites[index];
+            spriteRenderer.texture = enemySprites[index].texture;
         }
     }
 
