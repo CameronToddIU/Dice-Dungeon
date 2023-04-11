@@ -34,9 +34,6 @@ public class HealthCounter : MonoBehaviour
     {
         healthChanged = true;
         enemyHealthChanged = true;
-        // spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // spriteRenderer = enemyGameObject.GetComponent<Image>();
         if (enemyGameObject != null)
         {
             spriteRenderer = enemyGameObject.GetComponent<RawImage>();
@@ -54,7 +51,7 @@ public class HealthCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if health changes (using boolean variable to determine) then change the text number.
+        //if health changes then change the text number.
         if (healthChanged)  
         {
             if(health <= 0){
