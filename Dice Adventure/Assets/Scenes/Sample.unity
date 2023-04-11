@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &179859489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7020147345027051619, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+  m_PrefabInstance: {fileID: 7020147344049204553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &400338406
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +338,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
   m_PrefabInstance: {fileID: 7020147344049204553}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 179859489}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0ff5fa2331dd9499c88d674f78949d, type: 3}
@@ -1874,6 +1879,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -18
       objectReference: {fileID: 0}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemyGameObject
+      value: 
+      objectReference: {fileID: 179859489}
     - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
       propertyPath: enemySprites.Array.size
       value: 10
