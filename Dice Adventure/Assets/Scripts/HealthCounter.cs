@@ -20,6 +20,7 @@ public class HealthCounter : MonoBehaviour
 
     public int enemyHealthIncrease = 5;
 
+    private int spriteIndexLast = 0;
     public int spriteIndex = 0;
     public Sprite[] enemySprites;
     [SerializeField]
@@ -92,7 +93,16 @@ public class HealthCounter : MonoBehaviour
             enemyHealth = 15 + enemyHealthIncrease;
             maxEnemyHealth = 15 + enemyHealthIncrease;
             enemyHealthIncrease = enemyHealthIncrease + 5;
-            spriteIndex++;
+
+            spriteIndex = Random.Range(-1, 11);
+
+            while( spriteIndex == spriteIndexLast)
+                {
+                    spriteIndex = Random.Range(-1, 11);
+                }
+
+            Debug.Log("indexchoosen: " + spriteIndex);
+            spriteIndexLast = spriteIndex;
             SwapSprite(spriteIndex);
         }
         enemyHealthChanged = true;
