@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class HealthCounter : MonoBehaviour
 {
@@ -32,9 +34,6 @@ public class HealthCounter : MonoBehaviour
     {
         healthChanged = true;
         enemyHealthChanged = true;
-        // spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // spriteRenderer = enemyGameObject.GetComponent<Image>();
         if (enemyGameObject != null)
         {
             spriteRenderer = enemyGameObject.GetComponent<RawImage>();
@@ -52,13 +51,14 @@ public class HealthCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if health changes (using boolean variable to determine) then change the text number.
+        //if health changes then change the text number.
         if (healthChanged)  
         {
             if(health <= 0){
                 health = 0;
                 UnityEngine.Debug.Log("player died");
                 //death method
+                Die();
             }
             hpBar.fillAmount = health/maxHealth;
             //set text to value health 
@@ -125,6 +125,10 @@ public class HealthCounter : MonoBehaviour
         {
             spriteRenderer.texture = enemySprites[index].texture;
         }
+    }
+    public void Die()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
