@@ -10,7 +10,9 @@ public class HealthCounter : MonoBehaviour
     public TextMeshProUGUI enemyHealthText;
     bool healthChanged = false;
     int health = 20;
+    float maxHealth = 20;
     int enemyHealth = 15;
+    float maxEnemyHealth = 15;
     bool enemyHealthChanged = false;
     bool enemyKilled = false;
     public Image hpBar;
@@ -57,7 +59,7 @@ public class HealthCounter : MonoBehaviour
                 UnityEngine.Debug.Log("player died");
                 //death method
             }
-            hpBar.fillAmount = health/10.0f;
+            hpBar.fillAmount = health/maxHealth;
             //set text to value health 
             healthText.text = health.ToString();
             //set bool to false again so we can only change it when the value changes.
@@ -69,7 +71,7 @@ public class HealthCounter : MonoBehaviour
                 enemyHealth = 0;
                 //death method
             }
-            EHP.fillAmount = enemyHealth/25.0f;
+            EHP.fillAmount = enemyHealth/maxEnemyHealth;
             //set text to value health 
             enemyHealthText.text = enemyHealth.ToString();
             //set bool to false again so we can only change it when the value changes.
@@ -88,6 +90,7 @@ public class HealthCounter : MonoBehaviour
         {
             Debug.Log("EnemyDied");
             enemyHealth = 15 + enemyHealthIncrease;
+            maxEnemyHealth = 15 + enemyHealthIncrease;
             enemyHealthIncrease = enemyHealthIncrease + 5;
             spriteIndex++;
             SwapSprite(spriteIndex);
@@ -96,10 +99,11 @@ public class HealthCounter : MonoBehaviour
     }
 
     public void heal(){
-        if(enemyHealth <= 0){
+        UnityEngine.Debug.Log(enemyHealth);
+        if(enemyHealth <= 2){
             health = health + 5;
-            if(health >= 10){
-                health = 10;
+            if(health >= 20){
+                health = 20;
             }
             healthChanged = true;
         }

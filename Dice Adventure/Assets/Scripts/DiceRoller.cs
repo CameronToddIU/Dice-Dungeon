@@ -146,8 +146,8 @@ private IEnumerator WaitForDiceToStop()
             magic.Play();
             totalMana -= 5;
         manaText.text = "Mana: " + totalMana;
-        healthCounter.damage(2);
-        healthCounter.heal();
+            healthCounter.heal();
+            healthCounter.damage(2);
         }   
     }
 
