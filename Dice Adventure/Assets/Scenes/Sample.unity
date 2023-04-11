@@ -1874,6 +1874,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -18
       objectReference: {fileID: 0}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 367f7fdac058aa648a72defb403b50d8, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 53c57d776cf69334682a2a9521423485, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 871f0ea269700fe4c8a06ab808c4962a, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: b70db8c03d5fad1499fbee642b23e5af, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: acd842b2d28396f4bbd5f036168f316a, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: c2f51a40d35167249b5a72725c7dd67b, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a70852d9d37d0e4e84dc967294ba0be, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1687d6d95c2ca49449b250ab442f67a2, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: f4b42ac941c370146b052c5a95e1b7c2, type: 3}
+    - target: {fileID: 7020147344244919958, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
+      propertyPath: enemySprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 33464938a3d7f184fadfa275fc59ebbe, type: 3}
     - target: {fileID: 7020147344249187474, guid: 8eaf013e962b7254784dc271ecb634f4, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -125

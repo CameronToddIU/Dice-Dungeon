@@ -15,11 +15,21 @@ public class HealthCounter : MonoBehaviour
     bool enemyKilled = false;
     public Image hpBar;
     public Image EHP;
+
+    public int spriteIndex = 0;
+    public Sprite[] enemySprites;
+    [SerializeField]
+    public GameObject enemyGameObject;
+    private Image spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
         healthChanged = true;
         enemyHealthChanged = true;
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+
+        spriteRenderer = enemyGameObject.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -60,6 +70,13 @@ public class HealthCounter : MonoBehaviour
     public void damage(int d)
     {
         enemyHealth = enemyHealth - d;
+        if(enemyHealth <= 0)
+        {
+            Debug.Log("EnemyDied");
+            spriteIndex++;
+            SwapSprite(spriteIndex);
+            // SwapSprite(spriteIndex);
+        }
         enemyHealthChanged = true;
     }
 
@@ -70,6 +87,14 @@ public class HealthCounter : MonoBehaviour
                 health = 10;
             }
             healthChanged = true;
+        }
+    }
+
+        public void SwapSprite(int index)
+    {
+        if (spriteRenderer != null && enemySprites != null && index >= 0 && index < enemySprites.Length)
+        {
+            spriteRenderer.sprite = enemySprites[index];
         }
     }
 
