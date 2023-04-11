@@ -15,6 +15,13 @@ public class DiceRoller : MonoBehaviour
     public TextMeshProUGUI manaText;
     public HealthCounter healthCounter;
 
+    //sounds
+    public AudioSource water;
+    public AudioSource fire;
+    public AudioSource thunder;
+    public AudioSource rock;
+    public AudioSource magic;
+
 
     private bool isRolling = false;
 
@@ -89,6 +96,7 @@ private IEnumerator WaitForDiceToStop()
     public void useTorrent()
     {
         if(totalMana > 0) {
+            water.Play();
             totalMana -= 1;
             manaText.text = "Mana: " + totalMana;
             healthCounter.damage(1);
@@ -99,6 +107,7 @@ private IEnumerator WaitForDiceToStop()
     public void useFireball()
     {
         if(totalMana >=2) {
+            fire.Play();
             totalMana -= 2;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(3);
@@ -109,6 +118,7 @@ private IEnumerator WaitForDiceToStop()
     public void useShockwave()
     {
         if(totalMana >=3) {
+            thunder.Play();
             totalMana -= 3;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(5);  
@@ -119,6 +129,7 @@ private IEnumerator WaitForDiceToStop()
     public void useBoulderush()
     {
         if(totalMana >=4) {
+            rock.Play();
             totalMana -= 4;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(7);
@@ -129,6 +140,7 @@ private IEnumerator WaitForDiceToStop()
     public void useSmite() 
     {
         if(totalMana >= 5) {
+            magic.Play();
             totalMana -= 5;
         manaText.text = "Mana: " + totalMana;
         healthCounter.damage(2);
