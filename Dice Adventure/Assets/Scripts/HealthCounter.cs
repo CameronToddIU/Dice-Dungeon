@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class HealthCounter : MonoBehaviour
 {
@@ -59,6 +61,7 @@ public class HealthCounter : MonoBehaviour
                 health = 0;
                 UnityEngine.Debug.Log("player died");
                 //death method
+                Die();
             }
             hpBar.fillAmount = health/maxHealth;
             //set text to value health 
@@ -125,6 +128,10 @@ public class HealthCounter : MonoBehaviour
         {
             spriteRenderer.texture = enemySprites[index].texture;
         }
+    }
+    public void Die()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
